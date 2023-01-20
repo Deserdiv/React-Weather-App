@@ -11,7 +11,7 @@ function WeatherSearch() {
   async function handleSearch(e) {
     // Prevent form submission from refreshing page
     e.preventDefault();
-    // API key and URL for fetching weather data
+    // Fetching weather data
     const apiKey = '6a7a206f8171407e4ced0b46357e397f';
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}`;
     // Fetch weather data from API
@@ -49,18 +49,3 @@ function WeatherSearch() {
 export default WeatherSearch;
 
 
-// React ve useState içe aktarılır. Ayrıca, WeatherData componenti ve uygulamanın CSS dosyası da içe aktarılır.
-
-// WeatherSearch fonksiyonu tanımlanır ve location ve weather adlı iki state değişkeni tanımlanır ve başlangıç değerleri olarak boş dizgi ve null değerleri verilir. Bu değişkenler, useState hook'u kullanılarak tanımlanmıştır.
-
-// handleSearch adlı bir asenkron fonksiyon tanımlanır. Bu fonksiyon, bir form gönderiminden sonra çağrılır ve OpenWeatherMap API'sinden hava durumu verilerini çeker.
-
-// Form gönderiminin sayfayı yenilemesini engellemek için, preventDefault() metodu çağrılır.
-
-// OpenWeatherMap API'sine erişmek için bir API anahtarı ve API URL'si tanımlanır. Bu API URL'sinde, kullanıcının girdiği lokasyon ve API anahtarı değişkenleri içerir.
-
-// fetch() fonksiyonu kullanılarak API'den hava durumu verileri çekilir ve response değişkenine atanır. Daha sonra, response öğesi json() metodu kullanılarak işlenir ve data değişkenine atanır.
-
-// setWeather() fonksiyonu çağrılarak, weather değişkeninin değeri API'den çekilen verilere göre güncellenir. Bu veriler, temperature, humidity, ve windSpeed adlı özellikleri içerir.
-
-// Form, giriş alanı ve arama düğmesini içeren bir div etiketi içinde render edilir. Form, handleSearch fonksiyonunu çağıran bir onSubmit olay dinleyicisi içerir. Giriş alanı, `
